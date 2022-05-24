@@ -1,7 +1,7 @@
 import random
 import string
 
-NUMBER_OF_SPACES = 100
+NUMBER_OF_SPACES = 10
 NUMBER_OF_ADD_AND_REMOVE_ITERATIONS = 50
 
 
@@ -83,7 +83,7 @@ class Garage():
     def add_vehicle(self, vehicle): 
         if len(self.free_spaces)>0:
             self.places.insert(random.choice(self.free_spaces),vehicle)
-            print("New Car Registration Number: ", vehicle.registration_number)
+            print(f"Vehicle: {vehicle.registration_number} has been placed in the garage")
             return True
         return False
     
@@ -131,7 +131,7 @@ if __name__ == "__main__":
     
         #adds new and remove vehicles randomly
     for x in range(NUMBER_OF_ADD_AND_REMOVE_ITERATIONS):
-        print(f"--- ITERATION {x} ---")
+        #print(f"--- ITERATION {x} ---")
         if random.random()>0.5:
             for position in range(NUMBER_OF_SPACES):
                 if garage.is_space_available(position)==False:
@@ -143,7 +143,7 @@ if __name__ == "__main__":
                     break
         else:
             if garage.add_vehicle(make_vehicle()):
-                print("Vehicle been placed in the garage")
+                pass
             else:
                 print("No spaces left...")
                 
