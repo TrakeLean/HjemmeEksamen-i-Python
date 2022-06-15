@@ -3,9 +3,8 @@
 import random
 import string
 
-
-NUMBER_OF_SPACES = 100
-NUMBER_OF_ADD_AND_REMOVE_ITERATIONS = 50
+NUMBER_OF_SPACES = 10
+NUMBER_OF_ADD_AND_REMOVE_ITERATIONS = 5
 
 def make_vehicle():
     '''
